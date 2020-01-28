@@ -1,0 +1,23 @@
+﻿@page
+@using Microsoft.EntityFrameworkCore
+@model NewApp.Views.Home.Details
+
+@@{
+Layout = null;
+}
+
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+<h1>@Model.Id</h1>
+<h1>ID: @Model.Name</h1>
+<h1>Cuisine: @Model.Email</h1>
+<h1>Salary:@Model.Salary</h1>
+
+<div>
+</div>
+@Html.ActionLink("View All Employee", "Index","Home")
+</body>
+</html>

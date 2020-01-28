@@ -1,0 +1,40 @@
+﻿@model TModel
+@using NewApp.Models
+@model NewApp.Models.Employee;
+ 
+ @{
+     Layout = null;
+ }
+ 
+ <!DOCTYPE html>
+ 
+ <html>
+ <head>
+     <title>Home</title>
+ </head>
+ <body>
+ <div>
+     <h1>Create</h1>
+     @*You should change this form and use razor tags*@
+         @using (Html.BeginForm())
+         {
+             <div>
+                 @Html.LabelFor(m=>m.Name)
+                 @Html.TextBoxFor(m => m.Name)
+                 @Html.ValidationMessageFor(m=>m.Name)
+             </div>
+
+             <div>
+                 @Html.LabelFor(m=>m.Name)
+                 @Html.DropDownListFor(m=>m.Name, Html.GetEnumSelectList(typeof(UriHostNameType)))
+                 @Html.ValidationMessageFor(m=>m.Name)
+             </div>
+             <div>
+                 <input type="submit" value="Save">
+             </div>
+
+         }
+
+</div>
+ </body>
+ </html>

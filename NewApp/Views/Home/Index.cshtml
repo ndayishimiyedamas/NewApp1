@@ -1,0 +1,31 @@
+﻿@model NewApp.ViewModel.HomeViewModel
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+<div>
+    <h1>Welcome</h1>
+    <div>
+        <table>
+            @* @foreach (var resto in Model) *@
+            @foreach (var resto in Model.Employees)
+            {
+                <tr>
+                    <td>@Html.ActionLink(Employee.Id.ToString(), "detail", new {id = Employee.Id})</td>
+                    <td>@Employee.Email</td>
+                </tr>
+            }
+        </table>
+
+    </div>
+</div>
+</body>
+</html>
